@@ -55,7 +55,7 @@ class App extends React.Component {
         <h2>Repos</h2>
         {isLoading && <p>Loading...</p>}
         {!!repos.length && (
-          <table data-testid="repo-table" striped bordered hover>
+          <table data-testid="repo-table">
             <thead>
               <tr>
                 <th>Owner</th>
