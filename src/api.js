@@ -1,18 +1,26 @@
-import { REPOSITORIES_CONTRIBUTED_TO_QUERY } from "./queries"
+// https://www.howtographql.com/react-apollo/1-getting-started/
+import { ApolloClient } from "apollo-client"
+import { createHttpLink } from "apollo-link-http"
+import { InMemoryCache } from "apollo-cache-inmemory"
+import { setContext } from "apollo-link-context"
 
-export function fetchReposContributedToByUser(username) {
-  const variables = { username }
+const httpLink = createHttpLink({
+  uri: "https://api.github.com/graphql",
+})
+
+const authLink = setContext((_, { headers }) => {
   const token = process.env.REACT_APP_ACCESS_TOKEN
-  const body = JSON.stringify({
-    query: REPOSITORIES_CONTRIBUTED_TO_QUERY,
-    variables,
-  })
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  }
+})
 
-  // Querying data using `fetch`
-  // https://www.prisma.io/tutorials/build-react-graphql-app-with-fetch-ct19/#querying-data-using-fetch
-  return fetch("https://api.github.com/graphql", {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: token ? `Bearer ${token}` : "" },
-    body,
-  })
-}
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+})
+
+export default client
