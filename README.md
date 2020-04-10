@@ -30,6 +30,10 @@ I will build an app with the following features:
 - A button that queries the GitHub GraphQL service for the [`repositoriescontributedto`](https://developer.github.com/v4/object/user/#repositoriescontributedto) for the specified user
 - A table of repos showing repo owner, name, and stargazers
 
+##### Screenshot of finished app
+
+![screen recording of app]('./../contribution-list.gif)
+
 ### Agenda
 
 1. Configuration
