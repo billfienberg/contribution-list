@@ -1,9 +1,10 @@
 import React from "react"
+import Table from "react-bootstrap/Table"
 
 function RepoTable(props) {
   const { repos = [] } = props
   return (
-    <table data-testid="repo-table">
+    <Table data-testid="repo-table" striped bordered hover>
       <thead>
         <tr>
           <th>Owner</th>
@@ -25,7 +26,7 @@ function RepoTable(props) {
           )
         })}
       </tbody>
-    </table>
+    </Table>
   )
 }
 
