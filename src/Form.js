@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "react-bootstrap/Button"
 
 function Form(props) {
   const { onSubmit, isDisabled, onChange, username } = props
@@ -11,9 +12,9 @@ function Form(props) {
         </label>
       </div>
       <div>
-        <button type="submit" disabled={isDisabled}>
+        <Button type="submit" disabled={isDisabled} variant="primary">
           Fetch Contributions
-        </button>
+        </Button>
       </div>
     </form>
   )
