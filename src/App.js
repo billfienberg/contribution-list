@@ -1,6 +1,7 @@
 import React from "react"
 import { fetchReposContributedToByUser } from "./api"
 import Intro from "./Intro"
+import Form from "./Form"
 import RepoTable from "./RepoTable"
 
 class App extends React.Component {
@@ -36,19 +37,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Intro />
-        <form onSubmit={onSubmit}>
-          <div>
-            <label>
-              Username:
-              <input type="text" name="username" placeholder="billfienberg" onChange={onChange} value={username} />
-            </label>
-          </div>
-          <div>
-            <button type="submit" disabled={isDisabled}>
-              Fetch Contributions
-            </button>
-          </div>
-        </form>
+        <Form onSubmit={onSubmit} isDisabled={isDisabled} onChange={onChange} username={username} />
         <h2>Repos</h2>
         {isLoading && <p>Loading...</p>}
         {!!repos.length && <RepoTable repos={repos} />}
