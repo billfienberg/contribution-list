@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Realistic React Refactoring
 
-## Available Scripts
+## Motivation
 
-In the project directory, you can run:
+I strongly agree with Kent Beck's recommendation of first making the change easy, and then making the easy change.
 
-### `yarn start`
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">for each desired change, make the change easy (warning: this may be hard), then make the easy change</p>&mdash; Kent Beck (@KentBeck) <a href="https://twitter.com/KentBeck/status/250733358307500032?ref_src=twsrc%5Etfw">September 25, 2012</a></blockquote>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I also strongly agree with Kent C. Dodd's thoughts about testing implementation details.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Testing implementation details is a recipe for disaster.<br><br>Do yourself a favor and give react-testing-library a solid try. Your future self will thank your present self <a href="https://t.co/iMU4gcj8aP">https://t.co/iMU4gcj8aP</a> 🐐</p>&mdash; Kent C. Dodds 🧑‍🚀 (@kentcdodds) <a href="https://twitter.com/kentcdodds/status/1037855652985495552?ref_src=twsrc%5Etfw">September 7, 2018</a></blockquote>
 
-### `yarn test`
+Additionally, I try to make my code resemble documentation code as much as possible. However, documentation code is often updated and refactored much faster and more frequently than production code.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I hope this series of branches demonstrates my attempts to get an app working, add tests, and then incrementally improve the app without having to significantly change my tests.
 
-### `yarn build`
+### The App
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I don't want to build a cliche app, like a todo list. And I'd prefer if my app actually solves a real problem and/or answers a real question(s) I've had for a while.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Problem
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a developer who has a handful of typos and grammatical errors in open source documentation, I want to see a list of all the repos that I've contributed to, along with how many stars all those repos have, so I can "measure" the reach of my impact.
 
-### `yarn eject`
+#### Solution
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+I will build an app with the following features:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A text input where the user can type a GitHub username
+- A button that queries the GitHub GraphQL service for the [`repositoriescontributedto`](https://developer.github.com/v4/object/user/#repositoriescontributedto) for the specified user
+- A table of repos showing repo owner, name, and stargazers
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Agenda
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Configuration
+   - Prettier
+   - Format script
+1. Get it working with no dependencies
+   - Regular HTML and native `fetch`
+1. Add tests
+   - Testing library
+1. Separate data and UI
+   - Extract presentational components
+1. Reskin UI
+   - Replace regular HTML with Bootstrap
+1. Update API client
+   - Replace native `fetch` with Apollo Client
+1. Refactor
+   - Replace class components with hooks
