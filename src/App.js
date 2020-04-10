@@ -1,8 +1,8 @@
 import React from "react"
-import { fetchReposContributedToByUser } from "./api"
 import Intro from "./Intro"
 import Form from "./Form"
 import RepoTable from "./RepoTable"
+import { REPOSITORIES_CONTRIBUTED_TO_QUERY } from "./queries"
 
 class App extends React.Component {
   constructor(props) {
@@ -21,10 +21,13 @@ class App extends React.Component {
   onSubmit = async (event) => {
     event.preventDefault()
     this.setState({ isLoading: true })
-    const { state } = this
+    const { props, state } = this
+    const { client } = props
     const { username } = state
-    const response = await fetchReposContributedToByUser(username)
-    const result = await response.json()
+    const result = await client.query({
+      query: REPOSITORIES_CONTRIBUTED_TO_QUERY,
+      variables: { username },
+    })
     const { nodes } = result.data.user.repositoriesContributedTo
     this.setState({ repos: nodes, isLoading: false, username: "" })
   }
