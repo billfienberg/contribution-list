@@ -20,7 +20,7 @@ I don't want to build a cliche app, like a todo list. And I'd prefer if my app a
 
 #### Problem
 
-As a developer who has a handful of typos and grammatical errors in open source documentation, I want to see a list of all the repos that I've contributed to, along with how many stars all those repos have, so I can "measure" the reach of my impact.
+As a developer who has fixed a handful of typos and grammatical errors in open source documentation, I want to see a list of all the repos that I've contributed to, along with how many stars all those repos have, so I can "measure" the reach of my impact.
 
 #### Solution
 
