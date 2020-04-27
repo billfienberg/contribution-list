@@ -1,7 +1,14 @@
 # https://stackoverflow.com/a/59399062/3343716
 name: Node CI
 
-on: [push]
+on:
+  push:
+
+  # https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
+  # Scheduled workflows run on the latest commit on the default or base branch.
+  # * is a special character in YAML so you have to quote this string
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   build:
