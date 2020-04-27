@@ -1,7 +1,11 @@
 # https://stackoverflow.com/a/59399062/3343716
 name: Node CI
 
-on: [push]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "*/15 * * * *"
 
 jobs:
   build:
