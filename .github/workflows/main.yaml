@@ -8,7 +8,7 @@ on:
   # Scheduled workflows run on the latest commit on the default or base branch.
   # * is a special character in YAML so you have to quote this string
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build:
