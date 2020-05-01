@@ -3,11 +3,11 @@
 ## Table of Contents
 
 - [Motivation](#motivation)
-  * [The App](#the-app)
-    + [Problem](#problem)
-    + [Solution](#solution)
-      * [Screenshot of finished app](#screenshot-of-finished-app)
-  * [Agenda](#agenda)
+- [The App](#the-app)
+- [Problem](#problem)
+- [Solution](#solution)
+  * [Screenshot of finished app](#screenshot-of-finished-app)
+- [Agenda](#agenda)
 
 
 ## Motivation
