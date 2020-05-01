@@ -1,5 +1,15 @@
 # Realistic React Refactoring
 
+## Table of Contents
+
+- [Motivation](#motivation)
+  * [The App](#the-app)
+    + [Problem](#problem)
+    + [Solution](#solution)
+      * [Screenshot of finished app](#screenshot-of-finished-app)
+  * [Agenda](#agenda)
+
+
 ## Motivation
 
 I strongly agree with Kent Beck's recommendation of first making the change easy, and then making the easy change.
