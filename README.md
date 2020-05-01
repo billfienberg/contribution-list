@@ -7,7 +7,7 @@
 - [Problem](#problem)
 - [Solution](#solution)
   * [Screenshot of finished app](#screenshot-of-finished-app)
-- [Agenda](#agenda)
+- [Agenda](agenda)
 
 
 ## Motivation
