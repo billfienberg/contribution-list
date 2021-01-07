@@ -2,13 +2,14 @@
 
 ## Table of Contents
 
-- [Motivation](#motivation)
-- [The App](#the-app)
-- [Problem](#problem)
-- [Solution](#solution)
-  * [Screenshot of finished app](#screenshot-of-finished-app)
-- [Agenda](agenda)
-
+- [Realistic React Refactoring](#realistic-react-refactoring)
+  - [Table of Contents](#table-of-contents)
+  - [Motivation](#motivation)
+    - [The App](#the-app)
+      - [Problem](#problem)
+      - [Solution](#solution)
+        - [Screenshot of finished app](#screenshot-of-finished-app)
+    - [Agenda](#agenda)
 
 ## Motivation
 
