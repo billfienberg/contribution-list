@@ -49,15 +49,15 @@ I will build an app with the following features:
 1. Configuration
    - Prettier
    - Format script
-1. Get it working with no dependencies
+1. Get it working with no dependencies: [`basic-functionality` branch](https://github.com/billfienberg/contribution-list/tree/basic-functionality)
    - Regular HTML and native `fetch`
-1. Add tests
+1. Add tests: [`add-tests` branch](https://github.com/billfienberg/contribution-list/tree/add-tests)
    - Testing library
-1. Separate data and UI
+1. Separate data and UI: [`extract-presentational-components` branch](https://github.com/billfienberg/contribution-list/tree/extract-presentational-components)
    - Extract presentational components
-1. Reskin UI
+1. Reskin UI: [`reskin-ui` branch](https://github.com/billfienberg/contribution-list/tree/reskin-ui)
    - Replace regular HTML with Bootstrap
-1. Update API client
+1. Update API client: [`update-api-client` branch](https://github.com/billfienberg/contribution-list/tree/update-api-client)
    - Replace native `fetch` with Apollo Client
-1. Refactor
+1. Refactor: [`replace-class-component-with-hooks` branch](https://github.com/billfienberg/contribution-list/tree/replace-class-component-with-hooks)
    - Replace class components with hooks
